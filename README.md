@@ -64,3 +64,15 @@ jobs:
       - name: Job status
         run: echo "Status ${{ job.status }}"
 ```
+
+## Skip action
+to skip checks on push to `main`, include any of below into commit msg:
+
+- `[skip ci]`
+- `[ci skip]`
+- `[no ci]`
+- `[skip actions]`
+- `[actions skip]`
+
+
+[github docs](https://docs.github.com/en/actions/managing-workflow-runs/skipping-workflow-runs)
