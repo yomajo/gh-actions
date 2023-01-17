@@ -8,9 +8,8 @@ jobs:
   Do-GitHub-Actions:
     runs-on: ubuntu-22.04
     steps:
-      name: Event info
-        run: echo "Triggered automatically by a ${{ github.event_name }} to ${{ github.ref }}"
-        run: echo "Running on ${{ runner.os }}"      
+      - name: Event info
+        run: echo "Triggered automatically by a ${{ github.event_name }} to ${{ github.ref }}. Running on ${{ runner.os }}"
 
       - name: Check out repository code
         uses: actions/checkout@v3
@@ -24,11 +23,13 @@ jobs:
           python-version: '3.11'
           cache: pipenv
 
-      -name: Install Pipefile.lock
+      - name: Install Pipefile.lock
         run: pipenv sync
 
       - name: Run tests
         run: python -B -m pytest
+      
+      - name: Congratulate
         run: echo "TESTS PASSED"
 
       - name: Job status
