@@ -5,7 +5,7 @@ on:
       - main
       - 'releases/**'
 jobs:
-  Explore-GitHub-Actions:
+  Do-GitHub-Actions:
     runs-on: ubuntu-22.04
     steps:
       name: Event info
