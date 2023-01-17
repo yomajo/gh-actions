@@ -38,11 +38,8 @@ jobs:
         run: |
           pipenv install --deploy --dev
 
-      - name: Activate .venv
-        run: pipenv shell
-
       - name: Run tests
-        run: python -B -m pytest
+        run: pipenv run python -B -m pytest
       
       - name: Congratulate
         run: echo "TESTS PASSED"
