@@ -13,6 +13,10 @@ Implemented workflow:
 ```
 name: Test Before Merging to Main
 on:
+  pull_request:
+    branches:    
+      - main
+      - 'releases/**'
   push:
     branches:
       - main
