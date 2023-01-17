@@ -3,9 +3,10 @@ Playing with CI
 
 Implemented workflow:
 
-- triggers on merges to main branch
+- triggers on merges to `main` branch and pull requests
 - sets up linux machine with pipenv env and deps installed
 - runs tests
+- if `main` branch protection is setup, pull request won't let merge if tests are not passing
 
 
 `test_merge.yaml`
