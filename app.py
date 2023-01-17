@@ -14,6 +14,10 @@ def index():
 def index():
     return f'second route'
 
+@app.route('/more_additions')
+def index():
+    return f'more_additions'
+
 
 if __name__ == "__main__":
     pass
